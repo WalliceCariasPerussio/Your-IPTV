@@ -24,6 +24,12 @@ app.get("/", function (req, res) {
   res.redirect("/configure")
 });
 
+app.get("/configure", function (req, res) {
+  const newManifest = { ...MANIFEST };
+  res.render('configure.html',newManifest);
+  // res.render('configure.html',{MANIFEST});
+});
+
 app.get("/:userConf?/configure", function (req, res) {
   const newManifest = { ...{MANIFEST} };
   res.render('configure.html',newManifest);

@@ -17,7 +17,7 @@ switch (env) {
 
     // Configurações para o ambiente local (desenvolvimento).
     case 'local':
-        config.port = 3000; // Porta padrão para o ambiente local.
+        config.port = 3649; // Porta padrão para o ambiente local.
         config.local = "http://127.0.0.1:" + config.port; // URL local.
         break;
 }
