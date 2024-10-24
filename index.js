@@ -157,7 +157,8 @@ app.get('/:userConf/stream/:type/:id.json', function (req, res) {
 if (module.parent) {
   module.exports = app;
 } else {
-  app.listen(config.port, function () {
-  console.log(config)
-});
+  const port = process.env.PORT || config.port;
+  app.listen(port, function () {
+    console.log(`Server is running on port ${port}`);
+  });
 }
