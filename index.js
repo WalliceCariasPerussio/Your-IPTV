@@ -21,7 +21,9 @@ app.engine('html', require('ejs').renderFile);
 app.set('views', __dirname);
 
 app.get("/", function (req, res) {
-  res.redirect("/configure")
+  // res.redirect("/configure")
+  const newManifest = { ...{MANIFEST} };
+  res.render('configure.html',newManifest);
 });
 
 app.get("/configure", function (req, res) {
