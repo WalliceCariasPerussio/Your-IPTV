@@ -25,7 +25,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/configure", function (req, res) {
-  const newManifest = { ...MANIFEST };
+  const newManifest = { ...{MANIFEST} };
   res.render('configure.html',newManifest);
   // res.render('configure.html',{MANIFEST});
 });
